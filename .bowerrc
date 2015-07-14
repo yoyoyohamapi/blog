@@ -1,0 +1,6 @@
+{
+  "directory": "assets/bower_components",
+  "scripts": {
+    "postinstall": "bower-requirejs -c assets/js/common/main.js -b assets/bower_components/"
+  }
+}

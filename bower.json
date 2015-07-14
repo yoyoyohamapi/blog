@@ -1,0 +1,27 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "homepage": "https://github.com/yoyoyohamapi/blog",
+  "authors": [
+    "yoyoyohamapi <472285740@qq.com>"
+  ],
+  "description": "blog sys",
+  "keywords": [
+    "blog"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.2.1",
+    "jquery": "~2.1.4",
+    "requirejs": "~2.1.19",
+    "semantic-ui": "~2.0.3",
+    "underscore": "~1.8.3"
+  }
+}

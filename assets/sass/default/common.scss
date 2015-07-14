@@ -1,0 +1,18 @@
+@import "base";
+
+.mainContainer {
+  position: relative;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1355px) {
+  .mainContainer {
+    width: $main_content_width;
+  }
+}
+
+@media only screen and (min-width: 998px) {
+  .mainContainer {
+    /*right: 110px;*/
+  }
+}

@@ -1,0 +1,40 @@
+@import "base";
+
+$passport_bkg: "/images/passport-bkg.jpg";
+$passport_width: 80%;
+
+body {
+  padding-top: $max_padding;
+  background: {
+    image: url($passport_bkg);
+    repeat: no-repeat;
+    position: center;
+    attachment: fixed;
+    size: cover;
+  }
+;
+  color: white;
+}
+
+// 登录注册框
+.passportContainer {
+  padding: $mini_padding;
+  position: relative;
+  width: 60%;
+  @include card-dark-box-shadow;
+  @include horizontal-center;
+  background: rgba(0, 0, 0, 0.3);
+  @include border-radius($border_radius);
+  form {
+    .ui.header {
+      color: white;
+      border-bottom: 2px dashed rgba(161, 183, 205, 0.35);
+    }
+
+  }
+}
+
+// 最后按钮需要居中
+.field:last-child {
+  text-align: center;
+}
