@@ -1,5 +1,44 @@
 @import "base";
 
+$sider_bkg: "/images/common-sider.jpg";
+
+html {
+  font-size: 62.5%;
+}
+
+// 网站边栏
+.siteHead {
+  padding: 0px 10px;
+  color: white;
+  @include sider("left");
+  width: 300px;
+  height: 100%;
+  min-height: 400px;
+  background: #000000;
+  background: {
+    image: url($sider_bkg);
+    position: center center;
+    size: cover;
+  }
+;
+
+  .ui.circular.image {
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    @include horizontal-center;
+  }
+
+  .content h1 {
+    margin: 40px 0px 10px 0px;
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+    font-weight: bold;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  }
+
+}
+
 .mainContainer {
   position: relative;
   margin: 0 auto;

@@ -14,11 +14,24 @@ $border_radius: 5px;
 @import "compass/utilities";
 @import "compass/css3";
 
+// 定义水平居中
 @mixin horizontal-center {
   margin-left: auto;
   margin-right: auto;
 }
 
+// 定义深色卡片阴影
 @mixin card-dark-box-shadow {
   @include box-shadow(1px 1px 10px 1px #000);
+}
+
+@mixin sider($orientation) {
+  top: 0;
+  @if ($orientation == "left") {
+    left: 0;
+  } @else if ($orientation == "right") {
+    right: 0;
+  }
+  position: fixed;
+  text-align: center;
 }

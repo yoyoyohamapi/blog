@@ -16,92 +16,91 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    font-size: 100%;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
 /* line 22, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
-    line-height: 1;
+  line-height: 1;
 }
 
 /* line 24, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
-    list-style: none;
+  list-style: none;
 }
 
 /* line 26, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* line 28, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
-    text-align: left;
-    font-weight: normal;
-    vertical-align: middle;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
 }
 
 /* line 30, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
-    quotes: none;
+  quotes: none;
 }
-
 /* line 103, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
-    content: "";
-    content: none;
+  content: "";
+  content: none;
 }
 
 /* line 32, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
-    border: none;
+  border: none;
 }
 
 /* line 116, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-    display: block;
+  display: block;
 }
 
 /* line 6, ../../sass/default/passport.scss */
 body {
-    padding-top: 100px;
-    background-image: url("/images/passport-bkg.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    color: white;
+  padding-top: 100px;
+  background-image: url("/images/passport-bkg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
 }
 
-/* line 19, ../../sass/default/passport.scss */
+/* line 20, ../../sass/default/passport.scss */
 .passportContainer {
-    padding: 20px;
-    position: relative;
-    width: 60%;
-    -moz-box-shadow: 1px 1px 10px 1px #000;
-    -webkit-box-shadow: 1px 1px 10px 1px #000;
-    box-shadow: 1px 1px 10px 1px #000;
-    margin-left: auto;
-    margin-right: auto;
-    background: rgba(0, 0, 0, 0.3);
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+  padding: 20px;
+  position: relative;
+  width: 60%;
+  -moz-box-shadow: 1px 1px 10px 1px #000;
+  -webkit-box-shadow: 1px 1px 10px 1px #000;
+  box-shadow: 1px 1px 10px 1px #000;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(0, 0, 0, 0.3);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
 
-/* line 28, ../../sass/default/passport.scss */
+/* line 29, ../../sass/default/passport.scss */
 .passportContainer form .ui.header {
-    color: white;
-    border-bottom: 2px dashed rgba(161, 183, 205, 0.35);
+  color: white;
+  border-bottom: 2px dashed rgba(161, 183, 205, 0.35);
 }
 
-/* line 37, ../../sass/default/passport.scss */
+/* line 38, ../../sass/default/passport.scss */
 .field:last-child {
-    text-align: center;
+  text-align: center;
 }

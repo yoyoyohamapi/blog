@@ -33,7 +33,7 @@ module.exports = function (grunt) {
         },
         compass: {
             files: ['assets/sass/{,*/}*.scss'],
-            tasks: ['compass']
+            tasks: ['compass', 'sync:dev']
         }
     });
 

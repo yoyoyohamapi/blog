@@ -2,7 +2,7 @@
 define(function () {
     return {
         run: function () {
-            $('body').css('background-color', 'black');
+            //$('body').css('background-color', 'black');
         }
     }
 });

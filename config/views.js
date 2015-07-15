@@ -7,7 +7,10 @@ module.exports.views = {
         fn: function (path, data, cb) {
             /* Swig Renderer */
             var swig = require('swig');
-
+            // 保证我们在开发环境下每次更改swig不用重启sails
+            if (data.settings.env === 'development') {
+                swig.setDefaults({cache: false});
+            }
             /*
              * Bind public paths
              * Thanks to: https://github.com/mahdaen/sails-views-swig

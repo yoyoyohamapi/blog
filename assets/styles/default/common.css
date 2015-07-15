@@ -16,74 +16,112 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    font-size: 100%;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
 /* line 22, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
-    line-height: 1;
+  line-height: 1;
 }
 
 /* line 24, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
-    list-style: none;
+  list-style: none;
 }
 
 /* line 26, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* line 28, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
-    text-align: left;
-    font-weight: normal;
-    vertical-align: middle;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
 }
 
 /* line 30, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
-    quotes: none;
+  quotes: none;
 }
-
 /* line 103, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
-    content: "";
-    content: none;
+  content: "";
+  content: none;
 }
 
 /* line 32, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
-    border: none;
+  border: none;
 }
 
 /* line 116, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-    display: block;
+  display: block;
 }
 
-/* line 2, ../../sass/default/common.scss */
+/* line 5, ../../sass/default/common.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 10, ../../sass/default/common.scss */
+.siteHead {
+  padding: 0px 10px;
+  color: white;
+  top: 0;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  width: 300px;
+  height: 100%;
+  min-height: 400px;
+  background: #000000;
+  background-image: url("/images/common-sider.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 24, ../../sass/default/common.scss */
+.siteHead .ui.circular.image {
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 31, ../../sass/default/common.scss */
+.siteHead .content h1 {
+  margin: 40px 0px 10px 0px;
+  font-size: 3.5rem;
+  letter-spacing: -1px;
+  font-weight: bold;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* line 41, ../../sass/default/common.scss */
 .mainContainer {
-    position: relative;
-    margin: 0 auto;
+  position: relative;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 1355px) {
-    /* line 8, ../../sass/default/common.scss */
-    .mainContainer {
-        width: 850px;
-    }
+  /* line 47, ../../sass/default/common.scss */
+  .mainContainer {
+    width: 850px;
+  }
 }
-
 @media only screen and (min-width: 998px) {
-    /* line 14, ../../sass/default/common.scss */
-    .mainContainer {
-        /*right: 110px;*/
-    }
+  /* line 53, ../../sass/default/common.scss */
+  .mainContainer {
+    /*right: 110px;*/
+  }
 }
