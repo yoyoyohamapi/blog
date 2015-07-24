@@ -60,6 +60,10 @@ define(['semantic-form'], function () {
                             {
                                 type: 'empty',
                                 prompt: '站点名不能为空'
+                            },
+                            {
+                                type: 'maxLength[10]',
+                                prompt: '站点名不能超过10个字符'
                             }
                         ]
                     },
@@ -78,6 +82,15 @@ define(['semantic-form'], function () {
                             {
                                 type: 'length[6]',
                                 prompt: '密码不能少于6位'
+                            }
+                        ]
+                    },
+                    siteDesc: {
+                        identifier: 'siteDesc',
+                        rules: [
+                            {
+                                type: 'maxLength[20]',
+                                prompt: '站点简介不超过20字符'
                             }
                         ]
                     }

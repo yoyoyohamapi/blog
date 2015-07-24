@@ -170,11 +170,11 @@
         </h1>
 
         <h2>
-            <% if (typeof error !== 'undefined') { %>
-            <%= error %>
-            <% } else { %>
-            You don't have permission to see the page you're trying to reach.
-            <% } %>
+            {% if error -%}
+                {{ error }}
+            {% else -%}
+                You don't have permission to see the page you're trying to reach.
+            {%- endif %}
         </h2>
 
         <p class="help">

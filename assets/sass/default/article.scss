@@ -1,0 +1,72 @@
+@import "base";
+
+// modal样式
+.ui.modal {
+  min-height: 500px;
+  .header {
+    background-color: #0086b3;
+  }
+
+  .extra {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    border-top: 2px dashed #ccc;
+    background-color: #E4E4E4;
+    color: white;
+    padding: $mini_dist $medium_dist;
+  }
+}
+
+// 文章显示框
+.articleContainer {
+
+  .article {
+    display: block;
+    position: relative;
+    padding: $medium_dist;
+    background-color: #fff;
+    margin-bottom: $medium_dist;
+
+    .title {
+      display: block;
+      color: burlywood;
+      text-shadow: 1px 1px #ccc;
+      font-weight: bold;
+    }
+
+    .date {
+      font-size: 1.2rem;
+      color: #4d4d4c;
+      text-align: right;
+    }
+
+    .info .category {
+      text-align: right;
+
+      a {
+        font-size: 1.2rem;
+        font-style: italic;
+        color: #ccc;
+        text-decoration: underline;
+      }
+    }
+
+  }
+}
+
+// 文章编辑框
+.articleEditor {
+  padding: $medium_dist;
+  background: #fff;
+  // 表单样式
+  .ui.form {
+    h1, h2, label {
+      color: #696974;
+    }
+    .field textarea {
+      resize: none;
+    }
+  }
+
+}

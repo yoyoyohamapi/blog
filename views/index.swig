@@ -2,11 +2,7 @@
 {# 声明本页面调用的模块 #}
 {% set module = 'default/index' -%}
 
-{% block title -%}Woo的博客{%- endblock %}
+{% block title -%}首页{%- endblock %}
 {% block content -%}
-    <div>
-        <p>
-            这是Woo的博客ssad2322?
-        </p>
-    </div>
+    <h1>Welcome</h1>
 {%- endblock %}

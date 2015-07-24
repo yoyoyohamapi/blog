@@ -29,16 +29,11 @@ module.exports = {
         siteDesc: {
             type: 'string',
             defaultsTo: '暂无简介',
-            maxLength: 50
-        },
-        // 是否管理员（默认为非管理员）
-        isAdmin: {
-            type: 'boolean',
-            defaultsTo: false
+            maxLength: 20
         }
     },
 
-    // 创建（注册）用户前，对用户密码加盐加密
+    // 创建（注册）用户前，对用户密码加密
     beforeCreate: function (values, cb) {
         bcrypt.genSalt(10, function (err, salt) {
             bcrypt.hash(values.password, salt, function (err, hash) {
@@ -48,6 +43,30 @@ module.exports = {
                 cb();
             });
         });
+    },
+
+    // 创建用户后，自动为之生成默认分类-"未分类"，并更新站点信息
+    afterCreate: function (createdUser, cb) {
+        var thisModal = this;
+        Category.create({name: Category.getDefault(), creator: createdUser})
+            .exec(function (err, category) {
+                if (category) {
+                    thisModal.updateSite(createdUser);
+                    cb();
+                }
+            });
+    },
+
+    // 用户信息更新时，更新站点信息
+    afterUpdate: function (user, cb) {
+        this.updateSite(user);
+        cb();
+    },
+
+    // 更新站点信息
+    updateSite: function (user) {
+        sails.config.site.name = user.siteName;
+        sails.config.site.desc = user.siteDesc;
     }
 };
 

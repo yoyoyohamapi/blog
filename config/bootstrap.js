@@ -10,8 +10,13 @@
  */
 
 module.exports.bootstrap = function (cb) {
-
-    // It's very important to trigger this callback method when you are finished
-    // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
-    cb();
+    // 启动时刷新站点信息
+    User.find().exec(function (err, users) {
+        if (users.length > 0) {
+            var user = users[0];
+            sails.config.site.name = user.siteName;
+            sails.config.site.desc = user.siteDesc;
+        }
+        cb();
+    });
 };

@@ -1,7 +1,7 @@
 /**
- * CategoryController
+ * TagsController
  *
- * @description :: Server-side logic for managing categories
+ * @description :: Server-side logic for managing tags
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 // 文章查询顺序：以更新时间逆序
@@ -11,41 +11,38 @@ FIND_PER_PAGE = 2;
 
 module.exports = {
     getArticles: function (req, res) {
-        var id = req.param('id');
+        var name = req.param('name');
         var page = req.param('page') ? req.param('page') : 1;
         // 获得对应分类的所有文章
         // 获得总页数
-        Article
-            .count({category: id})
-            .then(function (count) {
+        Tags.findOne(name)
+            .then(function (tag) {
                 return [
-                    Math.ceil(count / FIND_PER_PAGE),
                     page,
                     Article.find({
                         where: {
-                            category: id
+                            tags: {contains: name}
                         },
                         sort: FIND_ORDER,
                         select: ['id', 'title', 'createdAt']
                     }).paginate({page: page, limit: FIND_PER_PAGE}),
-                    Category.findOne(id)
+                    tag
                 ];
             })
-            .spread(function (count, page, articles, category) {
+            .spread(function (page, articles, tag) {
                 res.view(
-                    'category/index',
+                    'tags/index',
                     {
-                        count: count,
+                        count: Math.ceil(tag.value / FIND_PER_PAGE),
                         page: page,
                         articles: articles,
-                        category: category
+                        tag: tag
                     }
                 );
             })
             .catch(function (err) {
                 res.badRequest();
             });
-
     }
 };
 

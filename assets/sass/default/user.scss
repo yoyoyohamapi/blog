@@ -1,0 +1,30 @@
+@import "base";
+
+$avatar_edge: 350px;
+
+.profileContainer {
+  margin-left: 15%;
+  background-color: #fff;
+  padding: $medium_dist;
+  text-align: center;
+
+  .ui.form {
+    .header {
+      text-align: left;
+    }
+
+    .field label {
+      text-align: left;
+    }
+
+    .field textarea {
+      resize: none;
+      height: 50px;
+    }
+  }
+  #avatar img {
+    width: $avatar_edge;
+    height: $avatar_edge;
+    border: 5px solid #ccc;
+  }
+}

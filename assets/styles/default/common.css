@@ -2,85 +2,33 @@
 /**
 * 基本配置
 */
-/* line 5, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-/* line 22, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
-
-/* line 24, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 28, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 30, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
 /* line 116, ../../../../../.rvm/gems/ruby-1.9.3-p547/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
-/* line 5, ../../sass/default/common.scss */
+/* line 30, ../../sass/default/_base.scss */
 html {
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
-/* line 10, ../../sass/default/common.scss */
+/* line 34, ../../sass/default/_base.scss */
+body {
+  font-size: 2.0rem;
+  line-height: 1.6em;
+  background-color: #ddd;
+}
+
+/* line 7, ../../sass/default/common.scss */
 .siteHead {
+  z-index: 10000;
   padding: 0px 10px;
   color: white;
   top: 0;
   left: 0;
   position: fixed;
   text-align: center;
-  width: 300px;
+  width: 20%;
   height: 100%;
   min-height: 400px;
   background: #000000;
@@ -88,8 +36,23 @@ html {
   background-position: center center;
   background-size: cover;
 }
-
 /* line 24, ../../sass/default/common.scss */
+.siteHead .action {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* line 29, ../../sass/default/common.scss */
+.siteHead #logout {
+  right: 5px;
+}
+
+/* line 32, ../../sass/default/common.scss */
+.siteHead #edit {
+  left: 5px;
+}
+
+/* line 37, ../../sass/default/common.scss */
 .siteHead .ui.circular.image {
   width: 100px;
   height: 100px;
@@ -98,30 +61,83 @@ html {
   margin-right: auto;
 }
 
-/* line 31, ../../sass/default/common.scss */
-.siteHead .content h1 {
+/* line 46, ../../sass/default/common.scss */
+.siteHead .content .siteName {
   margin: 40px 0px 10px 0px;
-  font-size: 3.5rem;
-  letter-spacing: -1px;
+  font-size: 2.5rem;
   font-weight: bold;
+  letter-spacing: -1px;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* line 41, ../../sass/default/common.scss */
-.mainContainer {
-  position: relative;
-  margin: 0 auto;
+/* line 55, ../../sass/default/common.scss */
+.siteHead .content .siteDesc {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
 }
 
-@media only screen and (min-width: 1355px) {
-  /* line 47, ../../sass/default/common.scss */
-  .mainContainer {
-    width: 850px;
-  }
+/* line 68, ../../sass/default/common.scss */
+.siteHead .linker {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
 }
-@media only screen and (min-width: 998px) {
-  /* line 53, ../../sass/default/common.scss */
-  .mainContainer {
-    /*right: 110px;*/
-  }
+
+/* line 76, ../../sass/default/common.scss */
+.siteHead .linker a {
+  color: white;
+}
+
+/* line 78, ../../sass/default/common.scss */
+.siteHead .linker a:hover {
+  color: #4183c4;
+}
+
+/* line 88, ../../sass/default/common.scss */
+.asidePart {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  padding: 10px;
+  width: 15%;
+  height: 100%;
+  border-left: 2px dashed #BFBFBF;
+}
+
+/* line 97, ../../sass/default/common.scss */
+.asidePart .list {
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 101, ../../sass/default/common.scss */
+.asidePart .list .title {
+  font-size: 1.5rem;
+}
+
+/* line 105, ../../sass/default/common.scss */
+.asidePart .list .content {
+  font-size: 1rem;
+}
+
+/* line 114, ../../sass/default/common.scss */
+.mainContainer {
+  position: relative;
+  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 21%;
+  margin-right: 10%;
+}
+
+/* line 126, ../../sass/default/common.scss */
+.button.expand {
+  width: 100%;
 }

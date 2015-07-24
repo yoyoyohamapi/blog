@@ -3,16 +3,37 @@
 */
 $main_content_width: 850px;
 
-$tiny_padding: 5px;
-$mini_padding: 20px;
-$medium_padding: 50px;
-$max_padding: 100px;
+$tiny_dist: 5px;
+$mini_dist: 10px;
+$medium_dist: 20px;
+$long_dist: 50px;
 
 $border_radius: 5px;
 
-@import "compass/reset";
+// 左侧边栏背景
+$sider_bkg: "/images/common-sider.jpg";
+
+// 左侧边栏宽度
+$sider_width: 20%;
+// 右侧边栏宽度
+$aside_width: 15%;
+
+@import "compass/reset/utilities";
+
+@include reset-html5;
+
 @import "compass/utilities";
 @import "compass/css3";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 2.0rem;
+  line-height: 1.6em;
+  background-color: #ddd;
+}
 
 // 定义水平居中
 @mixin horizontal-center {
@@ -25,6 +46,7 @@ $border_radius: 5px;
   @include box-shadow(1px 1px 10px 1px #000);
 }
 
+// 定义侧边栏
 @mixin sider($orientation) {
   top: 0;
   @if ($orientation == "left") {
@@ -33,5 +55,25 @@ $border_radius: 5px;
     right: 0;
   }
   position: fixed;
-  text-align: center;
+}
+
+// 定义白色卡
+@mixin whiteCard {
+  background-color: #fff;
+  padding: $mini_dist;
+  .title {
+    font-weight: 800;
+  }
+
+  .ui.list .content {
+    font-size: 1rem;
+    color: #d4d4d5;
+
+    a.header {
+      font-size: 1.6rem;
+      font-weight: 100;
+      margin-bottom: 5px;
+    }
+  }
+
 }

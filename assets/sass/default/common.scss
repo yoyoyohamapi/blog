@@ -1,17 +1,16 @@
 @import "base";
 
-$sider_bkg: "/images/common-sider.jpg";
 
-html {
-  font-size: 62.5%;
-}
+
 
 // 网站边栏
 .siteHead {
+  z-index: 10000;
   padding: 0px 10px;
   color: white;
   @include sider("left");
-  width: 300px;
+  text-align: center;
+  width: $sider_width;
   height: 100%;
   min-height: 400px;
   background: #000000;
@@ -20,8 +19,21 @@ html {
     position: center center;
     size: cover;
   }
-;
 
+  // 顶部动作
+  .action {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.72);
+  }
+  // 登出按钮
+  #logout {
+    right: 5px;
+  }
+  #edit {
+    left: 5px;
+  }
+
+  // 边栏中头像
   .ui.circular.image {
     width: 100px;
     height: 100px;
@@ -29,29 +41,89 @@ html {
     @include horizontal-center;
   }
 
-  .content h1 {
-    margin: 40px 0px 10px 0px;
-    font-size: 3.5rem;
-    letter-spacing: -1px;
-    font-weight: bold;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  // 边栏各部分内容
+  .content {
+    .siteName {
+      margin: 40px 0px 10px 0px;
+      font: {
+        size: 2.5rem;
+        weight: bold;
+      }
+      letter-spacing: -1px;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    }
+    .siteDesc {
+      margin: 0;
+      font: {
+        size: 1.2rem;
+        weight: 300;
+      }
+    ;
+      line-height: 1.5em;
+      letter-spacing: 0;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  // 边栏外链
+  .linker {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+
+    a {
+      color: white;
+      &:hover {
+        color: #4183c4;
+      }
+    }
+
   }
 
 }
 
+// 右侧依靠栏样式
+.asidePart {
+  position: fixed;
+  right: $medium_dist;
+  top: $medium_dist;
+  padding: $mini_dist;
+  width: $aside_width;
+  height: 100%;
+  border-left: 2px dashed #BFBFBF;
+
+  .list {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .content {
+      font-size: 1rem;
+
+    }
+
+  }
+}
+
+// 内容主容器
 .mainContainer {
   position: relative;
-  margin: 0 auto;
-}
-
-@media only screen and (min-width: 1355px) {
-  .mainContainer {
-    width: $main_content_width;
+  width: 100% - $sider_width - $aside_width - 5%;
+  margin: {
+    top: $medium_dist;
+    bottom: $medium_dist;
+    left: $sider_width + 1%;
+    right: $aside_width - 5%;
   }
 }
 
-@media only screen and (min-width: 998px) {
-  .mainContainer {
-    /*right: 110px;*/
-  }
+// 铺满的按钮
+.button.expand {
+  width: 100%;
 }

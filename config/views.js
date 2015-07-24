@@ -1,3 +1,4 @@
+var extras = require('swig-extras');
 module.exports.views = {
     engine: {
         /* Template File Extension */
@@ -11,8 +12,14 @@ module.exports.views = {
             if (data.settings.env === 'development') {
                 swig.setDefaults({cache: false});
             }
+            // 维护一个site变量
+            data.site = sails.config.site;
+            // 提供一个变量标示用户是否登录
+            if (typeof (data.isLogged) == 'undefined') {
+                data.isLogged = !!data.req.isAuthenticated();
+            }
             /*
-             * Bind public paths
+             * 绑定一些常用路径
              * Thanks to: https://github.com/mahdaen/sails-views-swig
              * */
             var paths = {
@@ -34,6 +41,8 @@ module.exports.views = {
                     }
                 }
             }
+            // 补充extra
+            extras.useFilter(swig, 'split');
             /* Render Templates */
             return swig.renderFile(path, data, cb);
         }

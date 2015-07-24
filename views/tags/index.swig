@@ -1,9 +1,9 @@
 {% extends 'layout.swig' -%}
-{% block title -%}分类-{{ category.name }}{%- endblock %}
+{% block title -%}标签-{{ tag.id }}{%- endblock %}
 {% block content %}
-    <div class="categoryContainer">
+    <div class="tagsContainer">
         <div class="title">
-            {{ category.name }}
+            {{ tag.id }}
         </div>
         <div class="ui divider"></div>
         <div class="ui middle aligned divided list">
@@ -25,16 +25,15 @@
             {% set pageCount = Array(count) %}
             {% for x in pageCount -%}
                 {% if loop.index == page -%}
-                    <a href="/category/{{ category.id }}/articles/{{ loop.index }}" class="active item">
+                    <a href="/tag/{{ tag.id }}/articles/{{ loop.index }}" class="active item">
                         {{ loop.index }}
                     </a>
                 {% else -%}
-                    <a href="/category/{{ category.id }}/articles/{{ loop.index }}" class="item">
+                    <a href="/tag/{{ tag.id }}/articles/{{ loop.index }}" class="item">
                         {{ loop.index }}
                     </a>
                 {%- endif %}
             {%- endfor %}
         </div>
     </div>
-
 {%- endblock %}

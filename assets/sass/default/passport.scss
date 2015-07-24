@@ -4,7 +4,7 @@ $passport_bkg: "/images/passport-bkg.jpg";
 $passport_width: 80%;
 
 body {
-  padding-top: $max_padding;
+  padding-top: 100px;
   background: {
     image: url($passport_bkg);
     repeat: no-repeat;
@@ -18,9 +18,9 @@ body {
 
 // 登录注册框
 .passportContainer {
-  padding: $mini_padding;
+  padding: $medium_dist;
   position: relative;
-  width: 60%;
+  width: 30%;
   @include card-dark-box-shadow;
   @include horizontal-center;
   background: rgba(0, 0, 0, 0.3);
@@ -31,6 +31,16 @@ body {
       border-bottom: 2px dashed rgba(161, 183, 205, 0.35);
     }
 
+  }
+
+  a.backToHome {
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    right: 5px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.58);
+    text-decoration: underline;
   }
 }
 

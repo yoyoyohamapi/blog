@@ -3,6 +3,15 @@
  * */
 var passport = require('passport');
 module.exports = {
+
+    /**
+     * 跳转到注册页面
+     * @param req
+     * @param res
+     */
+    toRegister: function (req, res) {
+        return res.view('passport/register');
+    },
     /**
      * 处理注册逻辑
      * @param req

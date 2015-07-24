@@ -32,21 +32,26 @@ module.exports.routes = {
      *                                                                          *
      ***************************************************************************/
 
-    //'/': {
-    //  view: 'homepage'
-    //}
 
-    '/': {
-        view: 'index'
-    },
+    //----------------Aticles
+    // 默认显示全部文章
+    '/': 'ArticleController.index',
+    // 显示某篇文章
+    'get /article/show/:id': 'ArticleController.show',
+    // 跳转到创建文章页
+    'get /article/new': 'ArticleController.new',
+    // 跳转到编辑文章页
+    'get /article/edit/:id': 'ArticleController.edit',
 
-    /**
-     * Login & Register
-     */
+    // 显示分类下的全部文章
+    '/category/:id/articles/:page': 'CategoryController.getArticles',
+
+    // 显示标签下的全部文章
+    '/tag/:name/articles/:page': 'TagsController.getArticles',
+
+    //---------------Login & Register
     // 跳转到注册页面
-    'get /register': {
-        view: 'passport/register'
-    },
+    'get /register': 'AuthController.toRegister',
     // 处理注册逻辑
     'post /register': 'AuthController.processRegister',
     // 跳转到登陆页
@@ -56,6 +61,13 @@ module.exports.routes = {
     // 处理登陆逻辑
     'post /login': 'AuthController.processLogin',
     // 登出逻辑
-    '/logout': 'AuthController.logout'
+    '/logout': 'AuthController.logout',
+
+    //---------------User Profile
+    '/user/profile': 'UserController.index',
+
+    '/user/profile/avatar': 'UserController.setAvatar',
+
+
 
 };

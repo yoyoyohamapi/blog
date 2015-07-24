@@ -1,0 +1,6 @@
+@import "base";
+
+.categoryContainer {
+  margin-left: 15%;
+  @include whiteCard;
+}

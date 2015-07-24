@@ -1,0 +1,6 @@
+@import "base";
+
+.tagsContainer {
+  margin-left: 15%;
+  @include whiteCard;
+}
