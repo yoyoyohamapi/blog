@@ -22,7 +22,7 @@ module.exports.views = {
              * 绑定一些常用路径
              * Thanks to: https://github.com/mahdaen/sails-views-swig
              * */
-            var paths = {
+            var path = {
                 script: '/js',
                 style: '/styles/default',
                 image: '/images',
